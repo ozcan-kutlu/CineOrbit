@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="190" viewBox="0 -36 620 226">
+  <defs>
+    <linearGradient id="gradRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
+    </linearGradient>
+    <path id="arcUpDown" d="M20,142 Q310,4 600,142" />
+  </defs>
+  <rect width="100%" height="100%" fill="none"/>
+  <text
+    fill="url(#gradRed)"
+    font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif"
+    font-size="104"
+    letter-spacing="3"
+  >
+    <textPath href="#arcUpDown" startOffset="50%" text-anchor="middle">
+      CINEORBIT
+    </textPath>
+  </text>
+</svg>

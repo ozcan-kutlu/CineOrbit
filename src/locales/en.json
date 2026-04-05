@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "login": "Login",
+    "myMovies": "My Movies",
+    "profileAlt": "Profile",
+    "language": "Language"
+  },
+  "sidebar": {
+    "categories": "Categories",
+    "catAll": "All",
+    "catMovies": "Movies",
+    "catTvSeries": "TV Series",
+    "catAnime": "Anime",
+    "movieGenres": "Movie Genres",
+    "tvGenres": "TV Genres",
+    "animeGenres": "Anime Genres",
+    "logoAlt": "CineOrbit logo"
+  },
+  "home": {
+    "heroTitle": "Discover movies and TV shows. Build your lists and start your watch journey.",
+    "heroWithTitle": "Spotlight: {{title}}. Use the sidebar for categories and genres, or search from the top bar.",
+    "heroNoTitle": "Pick a category or genre from the sidebar, or use the search bar to find something to watch.",
+    "explore": "Explore",
+    "popularMovies": "Popular movies",
+    "trendingWeek": "Trending this week",
+    "trendingSub": "Highlights from movies and TV.",
+    "popularMoviesSection": "Popular movies",
+    "popularTv": "Popular TV shows",
+    "chipAllTrending": "All (Trending)",
+    "chipMovies": "Movies",
+    "chipTv": "TV Series",
+    "chipAnime": "Anime",
+    "ctaTitle": "Ready for more?",
+    "ctaBody": "Go to the browse page for full results and pagination.",
+    "ctaButton": "Go to browse"
+  },
+  "search": {
+    "placeholder": "Search movies or TV shows...",
+    "noResults": "No results found"
+  },
+  "movies": {
+    "noMatch": "No movies or TV shows that match that name.",
+    "tryElse": "Please search for something else.",
+    "error": "An error has occurred."
+  },
+  "pagination": {
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "profile": {
+    "title": "My Profile",
+    "logout": "Logout",
+    "empty": "Add favorites or watchlist some movies to see them here!",
+    "favorites": "Favorite Movies",
+    "watchlist": "Watchlist",
+    "removeFav": "Remove from favorites",
+    "removeWl": "Remove from watchlist"
+  },
+  "movieDetail": {
+    "overview": "Overview",
+    "topCast": "Top Cast",
+    "officialSite": "Official Site",
+    "imdb": "IMDb",
+    "trailer": "Trailer",
+    "unfavorite": "Unfavorite",
+    "favorite": "Favorite",
+    "removeWatchlist": "Remove Watchlist",
+    "watchlist": "Watchlist",
+    "back": "Back",
+    "youMightLike": "You might also like",
+    "nothingFound": "Sorry, nothing was found.",
+    "errorBack": "Something has gone wrong - Go back",
+    "closeTrailer": "Close trailer",
+    "noTrailer": "No trailer found.",
+    "signInFav": "Sign in to use favorites.",
+    "addedFav": "Added to favorites.",
+    "removedFav": "Removed from favorites.",
+    "favError": "Could not update favorites.",
+    "signInWl": "Sign in to use the watchlist.",
+    "addedWl": "Added to watchlist.",
+    "removedWl": "Removed from watchlist.",
+    "wlError": "Could not update watchlist."
+  },
+  "tvDetail": {
+    "overview": "Overview",
+    "topCast": "Top Cast",
+    "officialSite": "Official Site",
+    "imdb": "IMDb",
+    "trailer": "Trailer",
+    "back": "Back",
+    "seasonsEpisodes": "{{seasons}} Seasons / {{episodes}} Episodes",
+    "airedEpisodes": "Aired episodes: {{count}}",
+    "youMightLike": "You might also like",
+    "nothingFound": "Sorry, nothing was found.",
+    "errorBack": "Something has gone wrong - Go back",
+    "closeTrailer": "Close trailer",
+    "noTrailer": "No trailer found."
+  },
+  "actors": {
+    "goBack": "Go back",
+    "back": "Back",
+    "born": "Born: {{date}}",
+    "noBio": "Sorry, no biography yet...",
+    "moviesTv": "Movies & TV Series"
+  },
+  "approved": {
+    "cancelled": "Authorization was cancelled on TMDB.",
+    "noToken": "TMDB did not return request token. Please try login again.",
+    "sessionFail": "TMDB session could not be created (401). Please re-authorize and try again.",
+    "accountFail": "TMDB account could not be loaded. Please try again.",
+    "goHome": "Go Home",
+    "completing": "Completing TMDB authentication..."
+  },
+  "voice": {
+    "welcome": "Hi! You can search for titles, open trending or genre pages, or try commands like \"popular\" or \"top rated\".",
+    "openedPopularTv": "Opened popular TV shows.",
+    "openedTrending": "Opened trending content.",
+    "openedTopRated": "Opened top rated movies.",
+    "openedUpcoming": "Opened upcoming movies.",
+    "openedAnime": "Opened anime.",
+    "openedGenre": "Opened the {{name}} genre.",
+    "searching": "Searching for \"{{query}}\".",
+    "fallback": "I did not understand. Try: \"popular\", \"top rated\", \"upcoming\", a genre name, or a movie title.",
+    "noSpeechApi": "This browser does not support speech recognition. Try Chrome or Edge.",
+    "listening": "Listening...",
+    "speechError": "Could not capture speech. Check your microphone permission and try again.",
+    "placeholder": "Type a command (e.g. popular, Inception)",
+    "title": "AI Assistant"
+  },
+  "movie": {
+    "mediaTv": "TV",
+    "mediaMovie": "Movie",
+    "removeAria": "Remove"
+  }
+}

@@ -1,0 +1,23 @@
+# Proje kokunde .env (REACT_APP_*) olmali. Kaynak degisince: npm run docker:refresh
+# Varsayilan port 8080 — baska bir uygulama 3000 kullaniyorsa catismaz.
+
+name: cineorbit
+
+services:
+  web:
+    image: cineorbit-web:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_TMDB_KEY: ${REACT_APP_TMDB_KEY}
+        REACT_APP_TMDB_REDIRECT_URL: ${REACT_APP_TMDB_REDIRECT_URL:-http://localhost:8080/approved}
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped

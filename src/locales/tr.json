@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "login": "Giriş",
+    "myMovies": "Filmlerim",
+    "profileAlt": "Profil",
+    "language": "Dil"
+  },
+  "sidebar": {
+    "categories": "Kategoriler",
+    "catAll": "Tümü",
+    "catMovies": "Filmler",
+    "catTvSeries": "Diziler",
+    "catAnime": "Anime",
+    "movieGenres": "Film türleri",
+    "tvGenres": "Dizi türleri",
+    "animeGenres": "Anime türleri",
+    "logoAlt": "CineOrbit logosu"
+  },
+  "home": {
+    "heroTitle": "Film ve dizileri keşfet; listelerini oluştur, izleme yolculuğuna başla.",
+    "heroWithTitle": "Öne çıkan: {{title}}. Kategori ve türler için sol menüyü veya üstteki aramayı kullan.",
+    "heroNoTitle": "Sol menüden kategori veya tür seç ya da arama çubuğundan içerik bul.",
+    "explore": "Keşfet",
+    "popularMovies": "Popüler filmler",
+    "trendingWeek": "Bu hafta trend",
+    "trendingSub": "Film ve dizilerden öne çıkanlar.",
+    "popularMoviesSection": "Popüler filmler",
+    "popularTv": "Popüler diziler",
+    "chipAllTrending": "Tümü (Trend)",
+    "chipMovies": "Filmler",
+    "chipTv": "Diziler",
+    "chipAnime": "Anime",
+    "ctaTitle": "Daha fazlasına hazır mısın?",
+    "ctaBody": "Tüm sonuçlar ve sayfalama için keşfet sayfasına geç.",
+    "ctaButton": "Keşfet sayfasına git"
+  },
+  "search": {
+    "placeholder": "Film veya dizi ara...",
+    "noResults": "Sonuç bulunamadı"
+  },
+  "movies": {
+    "noMatch": "Bu isimle eşleşen film veya dizi yok.",
+    "tryElse": "Lütfen başka bir şey arayın.",
+    "error": "Bir hata oluştu."
+  },
+  "pagination": {
+    "prev": "Önceki",
+    "next": "Sonraki"
+  },
+  "profile": {
+    "title": "Profilim",
+    "logout": "Çıkış",
+    "empty": "Favori veya izleme listenize film ekleyin; burada görünsün!",
+    "favorites": "Favori filmler",
+    "watchlist": "İzleme listesi",
+    "removeFav": "Favorilerden çıkar",
+    "removeWl": "İzleme listesinden çıkar"
+  },
+  "movieDetail": {
+    "overview": "Özet",
+    "topCast": "Oyuncular",
+    "officialSite": "Resmi site",
+    "imdb": "IMDb",
+    "trailer": "Fragman",
+    "unfavorite": "Favoriden çıkar",
+    "favorite": "Favorilere ekle",
+    "removeWatchlist": "Listeden çıkar",
+    "watchlist": "İzleme listesi",
+    "back": "Geri",
+    "youMightLike": "Bunlar da hoşuna gidebilir",
+    "nothingFound": "Üzgünüz, sonuç yok.",
+    "errorBack": "Bir şeyler ters gitti - Geri dön",
+    "closeTrailer": "Fragmanı kapat",
+    "noTrailer": "Fragman bulunamadı.",
+    "signInFav": "Favoriler için giriş yapın.",
+    "addedFav": "Favorilere eklendi.",
+    "removedFav": "Favorilerden çıkarıldı.",
+    "favError": "Favoriler güncellenemedi.",
+    "signInWl": "İzleme listesi için giriş yapın.",
+    "addedWl": "İzleme listesine eklendi.",
+    "removedWl": "İzleme listesinden çıkarıldı.",
+    "wlError": "İzleme listesi güncellenemedi."
+  },
+  "tvDetail": {
+    "overview": "Özet",
+    "topCast": "Oyuncular",
+    "officialSite": "Resmi site",
+    "imdb": "IMDb",
+    "trailer": "Fragman",
+    "back": "Geri",
+    "seasonsEpisodes": "{{seasons}} sezon / {{episodes}} bölüm",
+    "airedEpisodes": "Yayınlanan bölüm: {{count}}",
+    "youMightLike": "Bunlar da hoşuna gidebilir",
+    "nothingFound": "Üzgünüz, sonuç yok.",
+    "errorBack": "Bir şeyler ters gitti - Geri dön",
+    "closeTrailer": "Fragmanı kapat",
+    "noTrailer": "Fragman bulunamadı."
+  },
+  "actors": {
+    "goBack": "Geri dön",
+    "back": "Geri",
+    "born": "Doğum: {{date}}",
+    "noBio": "Henüz biyografi yok...",
+    "moviesTv": "Filmler ve diziler"
+  },
+  "approved": {
+    "cancelled": "TMDB üzerinde yetkilendirme iptal edildi.",
+    "noToken": "TMDB istek jetonu döndürmedi. Lütfen tekrar giriş yapın.",
+    "sessionFail": "TMDB oturumu oluşturulamadı (401). Lütfen yeniden yetkilendirin.",
+    "accountFail": "TMDB hesabı yüklenemedi. Lütfen tekrar deneyin.",
+    "goHome": "Ana sayfa",
+    "completing": "TMDB girişi tamamlanıyor..."
+  },
+  "voice": {
+    "welcome": "Merhaba! Başlık arayabilir, trend veya tür sayfaları açabilirsin; \"popüler\" veya \"en iyi\" gibi komutlar dene.",
+    "openedPopularTv": "Popüler diziler açıldı.",
+    "openedTrending": "Trend içerik açıldı.",
+    "openedTopRated": "En iyi filmler açıldı.",
+    "openedUpcoming": "Yakında çıkacak filmler açıldı.",
+    "openedAnime": "Anime açıldı.",
+    "openedGenre": "{{name}} türü açıldı.",
+    "searching": "\"{{query}}\" aranıyor.",
+    "fallback": "Anlamadım. Dene: \"popüler\", \"en iyi\", \"yakında\", bir tür adı veya film adı.",
+    "noSpeechApi": "Tarayıcı ses tanımayı desteklemiyor. Chrome veya Edge deneyin.",
+    "listening": "Dinliyorum...",
+    "speechError": "Ses algılanamadı. Mikrofon iznini kontrol edip tekrar deneyin.",
+    "placeholder": "Komut yazın (ör. popüler, Inception)",
+    "title": "Yapay zeka asistanı"
+  },
+  "movie": {
+    "mediaTv": "Dizi",
+    "mediaMovie": "Film",
+    "removeAria": "Kaldır"
+  }
+}
