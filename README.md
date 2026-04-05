@@ -1,109 +1,196 @@
-# CineOrbit
+<div align="center">
 
-CineOrbit is a React + Redux movie discovery app powered by the TMDB API.
+<img src="public/cineorbit-blue.svg" alt="CineOrbit" width="420">
 
-## Tech Stack
+### Film ve dizi keşfi — TMDB ile güçlendirilmiş modern web arayüzü
 
-- React 17
-- Redux Toolkit + RTK Query
-- Material UI (MUI v5)
-- Axios
-- Docker + Nginx (optional; app on port **8080**)
+**CineOrbit**, [The Movie Database (TMDB)](https://www.themoviedb.org/) API’sini kullanan, **React** ve **Redux Toolkit** tabanlı bir keşif uygulamasıdır. Açık/koyu tema, çoklu dil ve sesli asistan desteğiyle tek bir arayüzde film, dizi ve oyuncu içeriklerine ulaşmanızı sağlar.
 
-## Prerequisites
+[![React](https://img.shields.io/badge/React-17-61DAFB?style=for-the-badge&logo=react&logoColor=222)](https://reactjs.org/)
+[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
+[![MUI](https://img.shields.io/badge/MUI-v5-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+[![Docker](https://img.shields.io/badge/Docker-Nginx-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![TMDB](https://img.shields.io/badge/API-TMDB-01B4E4?style=for-the-badge)](https://www.themoviedb.org/documentation/api)
 
-- Node.js 18+
-- npm 9+
-- TMDB API key
+[![Repo](https://img.shields.io/badge/GitHub-CineOrbit-181717?style=flat-square&logo=github)](https://github.com/ozcan-kutlu/CineOrbit)
+[![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20TR-4CAF50?style=flat-square)](https://github.com/ozcan-kutlu/CineOrbit/tree/main/src/locales)
 
-## Environment Variables
+[Özellikler](#-özellikler) · [Hızlı başlangıç](#-hızlı-başlangıç) · [Docker](#-docker) · [Proje yapısı](#-proje-yapısı) · [Güvenlik](#-güvenlik)
 
-Copy `.env.example` to `.env` and fill values:
+</div>
 
-- `REACT_APP_TMDB_KEY`: TMDB API key
-- `REACT_APP_TMDB_REDIRECT_URL`: OAuth callback URL (`/approved`)
+---
 
-Example:
+## Özellikler
+
+| | |
+|:---|:---|
+| **Ana sayfa** | Hero bölümü, trend içerikler ve popüler film / dizi önizlemeleri |
+| **Keşif** | Kategoriler, türler ve arama ile tam sayfa ızgara görünümü (`/browse`) |
+| **Detay sayfaları** | Film, dizi, oyuncu ve profil rotaları; zengin metadata |
+| **Kimlik doğrulama** | TMDB OAuth akışı; callback `/approved` |
+| **Tema** | Material UI ile tutarlı, açık / koyu mod |
+| **Çoklu dil** | İngilizce ve Türkçe; tercih `localStorage` (`cineorbit_language`) |
+| **Sesli asistan** | Aktif dile göre **en-US** / **tr-TR** konuşma tanıma |
+
+### Uygulama akışı (özet)
+
+```mermaid
+flowchart LR
+  A[Landing /] --> B[Browse /browse]
+  B --> C[Film /movie/:id]
+  B --> D[Dizi /tv/:id]
+  B --> E[Oyuncu /actors/:id]
+  A --> F[Profil /profile/:id]
+  A --> G[OAuth /approved]
+```
+
+---
+
+## Teknoloji yığını
+
+| Katman | Teknoloji |
+|--------|-----------|
+| UI | React 17, Material UI (MUI) v5, Emotion |
+| Durum & veri | Redux Toolkit, RTK Query, React Redux |
+| HTTP | Axios |
+| Yönlendirme | React Router v5 |
+| Yerelleştirme | i18next, react-i18next |
+| Kalite | ESLint (Airbnb), Testing Library |
+| Dağıtım (isteğe bağlı) | Docker Compose, Nginx — uygulama **8080** |
+
+---
+
+## Gereksinimler
+
+- **Node.js** 18+
+- **npm** 9+
+- [TMDB](https://www.themoviedb.org/settings/api) API anahtarı
+
+---
+
+## Ortam değişkenleri
+
+`.env.example` dosyasını `.env` olarak kopyalayın ve değerleri doldurun:
+
+| Değişken | Açıklama |
+|----------|----------|
+| `REACT_APP_TMDB_KEY` | TMDB API anahtarı |
+| `REACT_APP_TMDB_REDIRECT_URL` | OAuth geri çağırma URL’si (örn. `/approved` tam adresi) |
+
+Örnek:
 
 ```env
 REACT_APP_TMDB_KEY=your_tmdb_api_key_here
 REACT_APP_TMDB_REDIRECT_URL=http://localhost:3000/approved
 ```
 
-## Local Development
+---
+
+## Hızlı başlangıç
 
 ```bash
 npm install
 npm run start
 ```
 
-App runs at `http://localhost:3000`.
+Uygulama varsayılan olarak **http://localhost:3000** adresinde açılır.
+
+### Faydalı komutlar
+
+```bash
+npm run lint          # ESLint
+npm run lint:fix      # Otomatik düzeltmeler
+npm run i18n:check    # Çeviri anahtarları tutarlılığı
+npm run test:ci       # Testler (watch kapalı)
+npm run build         # Üretim derlemesi
+```
+
+---
 
 ## Docker
 
-1. Copy `.env.example` to `.env`. Set `REACT_APP_TMDB_KEY`. For this container use:
+1. `.env` oluşturun; `REACT_APP_TMDB_KEY` zorunlu. Konteyner için geri çağırma adresi genelde:
 
-   `REACT_APP_TMDB_REDIRECT_URL=http://localhost:8080/approved` (must match your TMDB app callback URLs).
+   `REACT_APP_TMDB_REDIRECT_URL=http://localhost:8080/approved`
 
-2. From the project root:
+   (TMDB uygulama ayarlarındaki callback listesiyle aynı olmalı.)
+
+2. Proje kökünde:
 
 ```bash
 docker compose up -d --build
 ```
 
-Open **http://localhost:8080** (port **8080** avoids clashing with another app on 3000).
+Tarayıcıda **http://localhost:8080** — port **8080**, yerelde 3000 ile çakışmayı azaltmak içindir.
 
-After UI or `.env` changes:
+Arayüz veya `.env` değişince:
 
 ```bash
 npm run docker:refresh
 ```
 
-Stop: `npm run docker:down`.
+Durdurmak: `npm run docker:down`.
 
-## Quality Commands
+---
 
-```bash
-npm run lint
-npm run lint:fix
-npm run i18n:check
-npm run test:ci
-npm run build
+## Proje yapısı
+
+```
+src/
+├── app/           Redux store kurulumu
+├── features/      Redux slice’lar
+├── services/      RTK Query / TMDB API katmanı
+├── utils/         Yardımcı fonksiyonlar ve API destekleri
+├── components/    Sayfalar ve UI bileşenleri
+└── locales/       en.json, tr.json
 ```
 
-## Project Structure
+### Rotalar
 
-`src/app` - Redux store setup  
-`src/features` - Redux slices  
-`src/services` - RTK Query API layer  
-`src/utils` - shared utilities and API helpers  
-`src/components` - pages and UI components
+| Rota | İçerik |
+|------|--------|
+| `/` | Ana sayfa (hero, trend, popüler önizlemeler) |
+| `/browse` | Tam keşif ızgarası (kategori, tür, arama) |
+| `/movie/:id`, `/tv/:id`, `/actors/:id`, `/profile/:id` | Detay ve profil |
+| `/approved` | TMDB OAuth onayı |
 
-## Routes
+### Yerelleştirme (i18n)
 
-- `/` — Landing home (hero, trending, popular previews)
-- `/browse` — Full browse grid (categories, genres, search results)
-- `/movie/:id`, `/tv/:id`, `/actors/:id`, `/profile/:id`, `/approved` — as before
+- Metinler: `src/locales/en.json`, `src/locales/tr.json`
+- Uygulama çubuğunda **EN / TR** anahtarı (tema düğmesinin yanında)
+- Varsayılan dil tarayıcıya göre; yedek dil İngilizce
 
-## Internationalization (i18n)
+---
 
-- UI strings are in `src/locales/en.json` and `src/locales/tr.json`.
-- Toggle **EN / TR** in the app bar (next to the theme button). Choice is stored in `localStorage` under `cineorbit_language`.
-- Default language follows the browser; fallback is English.
-- Voice assistant uses **en-US** or **tr-TR** speech recognition based on the active language.
-
-## Security Notes
-
-- Never commit real secrets in `.env`.
-- Rotate TMDB API keys if exposed.
-- Keep authentication/session data minimal in browser storage.
-
-## Deployment
-
-Production bundle:
+## Dağıtım
 
 ```bash
 npm run build
 ```
 
-Serve the `build` directory with Nginx or any static server.
+`build` klasörünü Nginx veya herhangi bir statik dosya sunucusu ile yayınlayın.
+
+---
+
+## Güvenlik
+
+- Gerçek anahtarları repoya ve `.env` commit’lerine eklemeyin.
+- Sızan TMDB anahtarlarını [TMDB ayarlarından](https://www.themoviedb.org/settings/api) yenileyin.
+- Tarayıcıda oturum / kimlik verisini minimumda tutun.
+
+---
+
+<div align="center">
+
+**CineOrbit** — TMDB ile sinema ve dizi dünyasında yörünge.
+
+[TMDB API](https://developer.themoviedb.org/docs) · [Sorun bildir](https://github.com/ozcan-kutlu/CineOrbit/issues)
+
+</div>
+
+---
+
+## English summary
+
+**CineOrbit** is a React + Redux movie and TV discovery app powered by the **TMDB API**. It includes browse/search, detail pages, TMDB OAuth, light/dark theme, **EN/TR** i18n, and a voice assistant with locale-aware speech recognition. Run locally with `npm install && npm run start`, or use Docker on port **8080** as documented above.
