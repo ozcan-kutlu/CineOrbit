@@ -36,13 +36,21 @@
 ### Uygulama akışı (özet)
 
 ```mermaid
-flowchart LR
-  A[Landing /] --> B[Browse /browse]
-  B --> C[Film /movie/:id]
-  B --> D[Dizi /tv/:id]
-  B --> E[Oyuncu /actors/:id]
-  A --> F[Profil /profile/:id]
-  A --> G[OAuth /approved]
+flowchart TB
+  UI["NavBar · arama · dil · tema<br/>+ sesli asistan (tüm sayfalar)"]
+  UI -.-> Ana
+
+  Ana(["/ Ana sayfa"]) --> Keşif(["/browse Keşif"])
+  Ana --> Film(["/movie/:id Film"])
+  Ana --> Dizi(["/tv/:id Dizi"])
+  Ana --> Profil(["/profile/:id Profil"])
+  Ana --> Onay(["/approved OAuth sonrası"])
+
+  Keşif --> Film
+  Keşif --> Dizi
+  Keşif --> Oyuncu(["/actors/:id Oyuncu"])
+  Film --> Oyuncu
+  Dizi --> Oyuncu
 ```
 
 ---
