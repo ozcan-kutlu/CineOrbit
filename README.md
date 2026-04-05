@@ -33,26 +33,6 @@
 | **Çoklu dil** | İngilizce ve Türkçe; tercih `localStorage` (`cineorbit_language`) |
 | **Sesli asistan** | Aktif dile göre **en-US** / **tr-TR** konuşma tanıma |
 
-### Uygulama akışı (özet)
-
-```mermaid
-flowchart TB
-  UI["NavBar · arama · dil · tema<br/>+ sesli asistan (tüm sayfalar)"]
-  UI -.-> Ana
-
-  Ana(["/ Ana sayfa"]) --> Keşif(["/browse Keşif"])
-  Ana --> Film(["/movie/:id Film"])
-  Ana --> Dizi(["/tv/:id Dizi"])
-  Ana --> Profil(["/profile/:id Profil"])
-  Ana --> Onay(["/approved OAuth sonrası"])
-
-  Keşif --> Film
-  Keşif --> Dizi
-  Keşif --> Oyuncu(["/actors/:id Oyuncu"])
-  Film --> Oyuncu
-  Dizi --> Oyuncu
-```
-
 ---
 
 ## Teknoloji yığını
